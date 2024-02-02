@@ -1,0 +1,147 @@
+
+<main  class="cs-page-wrapper">
+  <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb-alt mb-0">
+        <li class="breadcrumb-item">
+          <a routerLink="['/']"><i class="cxi-home"></i></a>
+        </li>
+        <li class="breadcrumb-item">
+          <a routerLink="[/cuenta/direcciones]">mi direcciones</a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+    <section class="container pt-3 pt-lg-4 pb-5 pb-lg-6">
+      <div class="row pb-2 pb-lg-0">
+        <!-- Account menu (sticky sidebar) -->
+        <aside class="col-xl-3 col-lg-4 pb-3 mb-4 mb-lg-0">
+          <app-Sidevar></app-Sidevar>
+        </aside>
+        <!-- Content -->
+        <div class="col-lg-8 ml-auto">
+          <div class="d-flex align-item-center justify-center-between mb-4 pb-1 pb-sm-3">
+            <h1 class="h2 mb-0">Nueva direccion</h1>
+
+          </div>
+          <form class="mb-5" >
+            <div class="row mb-3">
+              <div class="col-sm-5 form-group">
+                <label for="ac-fn">destinatario</label>
+                <input type="text" class="form-control form-control-lg" name="destinatario"placeholder="Nombre completo del destinario">
+              </div>
+              <div class="col-sm-5 form-group">
+                <label for="ac-fn">dni</label>
+                <input type="text" class="form-control form-control-lg" name="dni" placeholder="digite su dni">
+              </div>
+              <div class="col-sm-5 form-group">
+                <label for="ac-fn">zip</label>
+                <input type="text" class="form-control form-control-lg" name="zip" placeholder="codigo postal">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-fn">direccion</label>
+                <textarea name="direccion" placeholder="digite su direccion" row="3" class="form-control" placeholder="Direccion"></textarea>
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-fn">telefono</label>
+                <input type="number" class="form-control form-control-lg" name="telefono"  placeholder="digite su telefono">
+              </div>
+
+
+              <div class="col-sm-5 form-group">
+                <label for="ac-fn">pais</label>
+                <select class="custom-select custom-select-lg"  name="pais" >
+                  <option value="" selected disabled>Selecciones</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Bolivia">Bolivia</option>
+                  <option value="Brasil">Brasil</option>
+                  <option value="Chile">Chile</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Cuba">Cuba</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="El Salvador">El Salvador</option>
+                  <option value="España">España</option>
+                  <option value="Estados Unidos">Estados Unidos</option>
+                  <option value="Guatemala">Guatemala</option>
+                  <option value="Haití">Haití</option>
+                  <option value="Honduras">Honduras</option>
+                  <option value="México">México</option>
+                  <option value="Nicaragua">Nicaragua</option>
+                  <option value="Panamá">Panamá</option>
+                  <option value="Paraguay">Paraguay</option>
+                  <option value="Perú">Perú</option>
+                  <option value="República Dominican">República Dominican</option>
+                  <option value="Uruguay">Uruguay</option>
+                  <option value="Venezuela">Venezuela</option>
+                </select>
+              </div>
+              <div class="col-sm-5 form-group">
+                <label for="ac-fn"></label>
+                <select class="custom-select custom-select-lg" id="sl-region"  name="region">
+                  <option value="" selected disabled>Selecciones</option>
+                  <option  ></option>
+                </select>
+              </div>
+              <div class="col-sm-5 form-group">
+                <label for="ac-fn">Departamentos</label>
+                <select class="custom-select custom-select-lg" id="sl-ciudad" name="Departamentos" >
+                  <option value="" selected disabled>Selecciones</option>
+                  <option  ></option>
+                </select>
+              </div><div class="col-sm-5 form-group">
+                <label for="ac-fn">Ciudades</label>
+                <select class="custom-select custom-select-lg" id="sl-ciudades" name="Ciudades" disabled>
+                  <option value="" selected disabled>Selecciones</option>
+                  <option></option>
+                </select>
+              </div>
+              <div class="col-sm-12form-group">
+                <div>
+                 <input class="custom-control-input" type="checkbox" id="ex-check-1" name="principal" >
+                 <label class="custom-control-label" for="ex-check-1">activar cuenta principal</label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">&nbsp;crear direcciones&nbsp;</button>
+          </form>
+          <div class="d-flex align-item-center justify-center-between mb-4 pb-1 pb-sm-3">
+            <h1 class="h2 mb-0">mi direcciones</h1>
+
+          </div>
+          <div class="row" >
+            <div class="col-12">
+              <ng-container >
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-ml-3 col-sm-4 mb-sm-0 mb-3">
+                        <h3 class="mb-2 font-size-lg"></h3>
+                        <span class="d-block mb-3 font-size-sm text-muted"></span>
+                        <a class="badge badge-primary" >Direccion de envio</a>
+                        <a class="badge badge-success" style="cursor:pointer">Establece direccion</a>
+                      </div>
+                      <div class="col">
+                        <p class="mb-3"></p>
+                        <p class="mb-3">
+                          <span ></span>
+                          <span ></span>
+                          <span ></span>
+                        </p>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+</main>
+

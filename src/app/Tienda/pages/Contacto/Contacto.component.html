@@ -1,0 +1,103 @@
+<main class="cs-page-wrapper">
+  <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb-alt mb-0">
+        <li class="breadcrumb-item">
+          <a routerLink="['/']"><i class="cxi-home"></i> Inicio</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a routerLink="[/Contacto]">Contacto</a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="container pt-3 pt-md-4">
+
+      <!-- Tabs content -->
+      <div class="col-md-8 ml-auto pt-md-2">
+        <div class="tab-content pb-2 pb-sm-4 pb-lg-5">
+
+          <!-- Tab: Contact Us -->
+          <div id="contact" class="tab-pane pb-5 fade show active" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="text-dark lead font-weight-bold">¡Nos encantaría saber de ti! Envíanos tus preguntas,
+                  inquietudes o comentarios a través de los siguientes métodos:</p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="cxi-iphone text-primary lead mr-2"></i>
+                    <a href="tel:4055550128">(405) 555-0128</a>
+                  </li>
+                  <li class="mb-2">
+                    <i class="cxi-mail text-primary lead mr-2"></i>
+                    <a href="mailto:support@example.com">supportexample.com</a>
+                  </li>
+                  <li class="mb-2">
+                    <i class="cxi-messenger text-primary lead mr-2"></i>
+                    <a href="#">Conéctate en Messenger</a>
+                  </li>
+                  <li class="mb-2">
+                    <i class="cxi-twitter text-primary lead mr-2"></i>
+                    <a href="#">Síguenos en Twitter</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p class="text-dark lead font-weight-bold pb-2">O contáctanos completando el siguiente formulario:</p>
+                <form>
+                  <!-- Formulario aquí -->
+                  <form >
+                    <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label for="cont-name">Nombre y Apellido*</label>
+                        <input type="text" id="cont-name" class="form-control form-control-lg" placeholder="John Doe" required="" name="cliente" >
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="cont-email">Correo *</label>
+                        <input type="email" id="cont-email" class="form-control form-control-lg" placeholder="johndoe@example.com" required=""  name="correo">
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="cont-phone">Telefono</label>
+                        <input type="text" id="cont-phone" class="form-control form-control-lg bg-0" placeholder="00-000-0000"  name="telefono">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="cont-subject">Asunto</label>
+                        <input type="text" id="cont-subject" class="form-control form-control-lg bg-0" placeholder="Title of your message"  name="Asunto" >
+                    </div>
+                    <div class="col-12 form-group">
+                        <label for="cont-message">Mensaje *</label>
+                        <textarea id="cont-message" class="form-control form-control-lg" rows="5" placeholder="Write your message here" required=""  name="mensaje" ></textarea>
+
+                    </div>
+                    <div class="col-lg-4 col-sm-5 pt-2">
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Send message</button>
+                  </div>
+                    </div>
+                </form>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Outlet Stores -->
+          <div id="stores" class="tab-pane pb-3 fade" role="tabpanel" aria-labelledby="stores-tab">
+            <div class="row">
+              <!-- Tarjetas de tiendas aquí -->
+            </div>
+          </div>
+
+          <!-- Tab: FAQ -->
+          <div id="faq" class="tab-pane fade mt-n3 mt-dm-0 pb-5" role="tabpanel" aria-labelledby="faq-tab">
+            <div class="accordion" id="accordionFaq">
+              <!-- Preguntas frecuentes aquí -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+</main>
+<app-Footer></app-Footer>

@@ -1,0 +1,280 @@
+<main class="cs-page-wrapper">
+  <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb-alt mb-0">
+        <li class="breadcrumb-item">
+          <a routerLink="['/']"><i class="cxi-home"></i></a>
+        </li>
+        <li class="breadcrumb-item">
+          <a routerLink="[/cuenta/perfil]">porfile</a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+  <section class="container pt-3 pt-lg-4 pb-5 pb-lg-6">
+    <div class="row pb-2 pb-lg-0">
+      <!-- Account menu (sticky sidebar) -->
+      <aside class="col-xl-3 col-lg-4 pb-3 mb-4 mb-lg-0">
+
+      </aside>
+
+      <!-- Content -->
+      <div class="col-lg-8 ml-auto">
+        <div
+          class="d-flex align-items-center justify-content-between mb-4 pb-sm-2"
+        >
+          <h1 class="h2 mb-0"></h1>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="card card-body py-3 box-shadow">
+              <div class="row">
+                <div class="col-lg-6">
+                  <table class="table mb-0">
+                    <tbody>
+                      <tr>
+                        <th class="border-0 py-2 pl-0">Order No:</th>
+                        <td class="border-0 py-2 px-0 text-muted">
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="border-0 py-2 pl-0">Shiped via:</th>
+                        <td class="border-0 py-2 px-0 text-muted">
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="border-0 py-2 pl-0">Shipped on:</th>
+                        <td class="border-0 py-2 px-0 text-muted">
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-lg-6">
+                  <table class="table mb-0">
+                    <tbody>
+                      <tr>
+                        <th class="border-0 py-2 pl-0">Destination:</th>
+                        <td class="border-0 py-2 px-0 text-muted">
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="border-0 py-2 pl-0">Expected date:</th>
+                        <td class="border-0 py-2 px-0 text-muted">
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="border-0 py-2 pl-0">Status:</th>
+                        <td class="border-0 py-2 px-0 text-muted">
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-4" >
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-ml-3 col-sm-4 mb-sm-0 mb-3">
+                    <h3 class="mb-2 font-size-lg">
+
+                    </h3>
+                    <span class="d-block mb-3 font-size-sm text-muted"></span>
+                    <a
+                      class="badge badge-primary"
+
+                      >Direccion de envio</a
+                    >
+                  </div>
+                  <div class="col">
+                    <p class="mb-3"></p>
+                    <p class="mb-3">
+
+                      <span ></span>
+                      <span ></span>
+                      <span></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-bottom">
+          <div id="order-1" class="collapse show" data-parent="#orders">
+            <div class="bg-secondary rounded mb-4">
+              <div class="table-responsive">
+                <table class="table mb-0">
+                  <tbody>
+                    <tr >
+                      <td class="border-top-0">
+                        <div class="media pl-2 py-2">
+                          <a href="shop-single.html" style="min-width: 80px">
+
+                          </a>
+                          <div class="media-body pl-3">
+                            <h3 class="font-size-sm mb-3">
+                              <a
+                                href="shop-single.html"
+                                class="nav-link font-weight-bold"
+                                ></a
+                              >
+                            </h3>
+                            <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                              <li class="mb-0">
+                                <span class="text-muted"
+                                  ></span
+                                >
+
+                              </li>
+                            </ul>
+                            <a
+
+                              style="cursor: pointer"
+                              data-toggle="modal"
+
+                              class="text-primary"
+                              >[Emitir Reseña]</a
+                            >
+                            <div
+                              class="modal fade"
+
+                              tabindex="1"
+                              style="display: none"
+                              aria-hidden="true"
+                            >
+                              <div
+                                class="modal-dialog modal-dialog-centered"
+                                role="document"
+                              >
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h4 class="modal-title">Emitir Rese;a</h4>
+                                    <button
+                                      class="close"
+                                      type="button"
+                                      data-dismiss="modal"
+                                      aria-label="close"
+                                    >
+                                      <span aria-hidden="true"></span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="row">
+                                      <div class="col-sm-12 form-group">
+                                        <label class="ac-fn">Rese;a</label>
+                                        <textarea
+                                          required
+                                          class="form-control"
+                                          placeholder="Que te parecio el producto"
+                                          name="review"
+                                          [(
+                                            ngModel
+                                          )]="review.review"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button
+                                      class="btn btn-secondary btn-sm"
+                                      type="button"
+                                      data-dismiss="modal"
+                                    >
+                                      cerra
+                                    </button>
+                                    <button
+                                      class="btn btn-primary btn-shadow btn-sm"
+                                      type="button"
+                                    >
+                                      enviar
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="border-top-0">
+                        <div class="py-2">
+                          <div class="font-size-xs text-muted mb-1">Price:</div>
+                          <div class="font-size-sm text-dark">
+
+                          </div>
+                        </div>
+                      </td>
+                      <td class="border-top-0">
+                        <div class="py-2">
+                          <div class="font-size-xs text-muted mb-1">
+                            Quantity:
+                          </div>
+                          <div class="font-size-sm text-dark">
+
+                          </div>
+                        </div>
+                      </td>
+                      <td class="border-top-0">
+                        <div class="py-2 pr-3 text-right">
+                          <div class="font-size-xs text-muted mb-1">
+                            Subtotal:
+                          </div>
+                          <div class="font-size-sm font-weight-bold text-dark">
+
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="py-2">
+                          <span class="font-size-xs text-muted"
+                            >Shipping:
+                          </span>
+                          <span class="font-size-sm text-dark"
+                            ></span
+                          >
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="py-2 pr-3 text-right">
+                          <span class="font-size-xs text-muted">Total: </span>
+                          <span class="font-size-sm font-weight-bold text-dark"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end align-items-center mb-4">
+              <a
+                href="order-tracking.html"
+                class="btn btn-outline-primary btn-sm"
+                >Order tracking</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 ml.auto">
+        <div class="row">
+          <div class="col-12"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,185 @@
+<!-- Header (Topbar + Navbar) -->
+<header class="cs-header">
+  <!-- Navbar -->
+  <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+  <div
+    class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky"
+    data-fixed-element
+  >
+    <div class="container px-0 px-xl-3">
+      <a href="index.html" class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4">
+
+      </a>
+
+      <!-- Toolbar -->
+      <div class="d-flex align-items-center order-lg-3">
+        <ul class="nav nav-tools flex-nowrap">
+          <ng-container >
+            <li class="nav-item d-lg-block d-none mb-0" *ngFor="let item of login2">
+              <a [routerLink]="['Auth/login']" routerLinkActive="router-link-active active" class="nav-link dropdown-toggle nav-link-spacing" data-toggle="dropdown">
+                  {{item.label}}
+              </a>
+          </li>
+
+          </ng-container>
+          <!-- <ng-container >
+            <li class="nav-item d-lg-block d-none  dropdown">
+              <a
+
+                class="nav-tool dropdown-toggle"
+                toggle="dropdown"
+                style="cursor: pointer"
+              >
+                <i class="cxi-profile nav-tool-icon"></i>
+                <span class="nav-tool-label"></span>
+              </a>
+              <div class="dropdown-menu">
+                <a routerLinkActive="router-link-active" class="dropdown-item">
+                  <i class="cxi-profile mr-2"></i>
+                  Profile
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="cxi-comment mr-2"></i>
+                  Message
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="cxi-external-link mr-2"></i>
+                  Setting
+                </a>
+
+                <a  class="dropdown-item" style="cursor: pointer">
+                  <i class="cxi-logout mr-2"></i>
+                  cerrar sesion
+                </a>
+              </div>
+            </li>
+          </ng-container> -->
+
+          <li class="divider-vertical mb-0 d-lg-block d-none"></li>
+          <li class="nav-item align-self-center mb-0" >
+            <a
+              style="cursor:pointer"
+              class="nav-tool pr-lg-0"
+
+            >
+              <i class="cxi-cart nav-tool-icon"></i>
+              <span
+                class="badge badge-success align-middle mt-n1 ml-2 px-2 py-1 font-size-xs"
+                ></span
+              >
+
+            </a>
+          </li>
+          <li class="divider-vertical mb-0 d-lg-none d-block"></li>
+          <li class="nav-item mb-0">
+            <button
+              class="navbar-toggler mt-n1 mr-n3"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+              aria-expanded="false"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!-- Navbar collapse -->
+      <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse">
+        <!-- Search mobile -->
+        <div class="input-group-overlay form-group mb-0 d-lg-none d-block">
+          <input
+            type="text"
+            class="form-control prepended-form-control rounded-0 border-0"
+            placeholder="Search for products..."
+          />
+          <div class="input-group-prepend-overlay">
+            <span class="input-group-text">
+              <i class="cxi-search font-size-lg align-middle mt-n1"></i>
+            </span>
+          </div>
+        </div>
+        <!-- Menu -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown" *ngFor="let item of navBar">
+            <a [routerLink]="item.url" routerLinkActive="router-link-active active" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <i class="user-icon"></i> {{item.label}}
+            </a>
+            <!-- Dropdown menu (if needed) -->
+            <div class="dropdown-menu">
+              <!-- Dropdown items go here -->
+            </div>
+          </li>
+        </ul>
+
+
+
+      </nav>
+    </div>
+  </div>
+</header>
+<div id="cart" class="cs-offcanvas cs-offcanvas-right">
+
+  <!-- Header -->
+  <div class="cs-offcanvas-cap align-items-center border-bottom">
+    <h2 class="h5 mb-0">Your cart </h2>
+    <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close" >
+      <span class="h3 font-weight-normal mb-0" aria-hidden="true" >×</span>
+    </button>
+  </div>
+
+  <!-- Body -->
+  <div class="cs-offcanvas-body">
+    <!-- Item -->
+    <div class="media p-4 border-bottom mx-n4" >
+      <a href="shop-single.html" style="min-width: 80px;">
+        <img  width="80" alt="Product thumb">
+      </a>
+      <div class="media-body pl-3" >
+        <div class="d-flex justify-content-between">
+          <div class="pr-2">
+            <h3 class="font-size-sm mb-3">
+              <a href="shop-single.html" class="nav-link font-weight-bold"></a>
+            </h3>
+            <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+              <li class="mb-0"><span class="text-muted"></span> </li>
+            </ul>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control form-control-sm bg-light mr-3" readonly style="width: 4.5rem;" >
+              <div class="d-flex align-items-center mb-sm-0 mb-4" >
+                <span class="h5 d-inline-block text-danger mb-0"></span>
+                <del class="d-inline-block ml-2 pl-1 text-muted"></del>
+                <span class="ml-4 p-2 badge badge-danger font-size-base font-weight-bold">-</span>
+              </div>
+              <div class="d-flex align-items-center mb-sm-0 mb-4" >
+                  <span class="h5 d-inline-block text-danger mb-0"></span>
+                  <del class="d-inline-block ml-2 pl-1 text-muted"></del>
+                  <span class="ml-4 p-2 badge badge-danger font-size-base font-weight-bold">-</span>
+                </div>
+            </div>
+            <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+              Move to
+              <i class="cxi-heart ml-1"></i>
+            </button>
+          </div>
+          <div class="nav-muted mr-n2">
+            <a  class="nav-link px-2 mt-n2"  title="remove" style="cursor: pointer"></a><i class="cxi-delete"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="cs-offcanvas-cap flex-column border-top">
+    <div class="d-flex align-items-center justify-content-between mb-3 pb-1">
+      <span class="text-muted mr-2">Subtotal:</span>
+      <span class="h5 mb-0"></span>
+    </div>
+    <a class="btn btn-primary btn-lg btn-block">
+      <i class="cxi-credit-card font-size-lg mt-n1 mr-1" ></i>
+      Checkout
+    </a>
+  </div>
+</div>

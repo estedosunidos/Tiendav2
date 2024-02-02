@@ -1,0 +1,28 @@
+/* footer.component.css */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* app.component.css */
+
+/* Estilo para asegurar que el contenido no se solape con el footer */
+main {
+  margin-bottom: 60px; /* Ajusta el valor según sea necesario */
+}

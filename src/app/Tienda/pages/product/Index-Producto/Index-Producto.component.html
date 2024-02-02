@@ -1,0 +1,245 @@
+
+  <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb-alt mb-0">
+        <li class="breadcrumb-item">
+          <a routerLink="['/']"><i class="cxi-home"></i></a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">productos</li>
+      </ol>
+    </div>
+  </nav>
+  <section class="container pt-3 pb-5 pb-md-6 mb-2 mb-lg-0">
+    <div class="row ,b-5" *mgIf="descuento_activo !=undefined">
+      <div class="col-12">
+        <img  style="width:100% !important">
+
+      </div>
+
+    </div>
+
+    <!-- Toolbar + Pagination -->
+    <div class="row mb-4 pb-2">
+      <div class="col-md-3 pr-lg-4 mb-3 mb-md-0">
+        <!-- Show / hide filters (off-canvas) on Mobile -->
+        <button type="button" class="btn btn-primary btn-block mt-0 d-lg-none" data-toggle="offcanvas" data-target="filtersOffcanvas">
+          <i class="cxi-filter-2 mr-1"></i>
+          Show filters
+        </button>
+      </div>
+
+      <div class="col-md-9">
+        <div class="d-flex align-items-center">
+          <div class="form-inline flex-nowrap mr-3 mr-xl-5">
+            <label for="sorting-top" class="font-weight-bold text-nowrap mr-2 pr-1 d-none d-lg-block">Sort by</label>
+            <select id="sorting-top" class="custom-select" name="sort_by" >
+              <option value="Defect">defect</option>
+              <option value="Popularity">popularity</option>
+              <option value="Low_Hight_price">Low - Hight Price</option>
+              <option value="High_Low_price">High - Low Price</option>
+              <option value="A_z_order">A - Z Order</option>
+              <option value="z_A_oder">Z - A Order</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row flex-lg-nowrap">
+
+
+      <!-- Filters (sidebar) -->
+      <div id="filtersSidebar" class="col-lg-3 pr-lg-4">
+        <div id="filtersOffcanvas" class="cs-offcanvas cs-offcanvas-collapse">
+          <div class="cs-offcanvas-cap align-items-center border-bottom mb-3">
+            <h2 class="h5 mb-0">Shop filters</h2>
+            <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close">
+              <span class="h2 font-weight-normal mt-n1 mb-0" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="cs-offcanvas-body accordion-alt pb-4">
+            <!--Busqueda-->
+            <div class="card border-bottom">
+              <div class="card-header py-3" id="filter-panel">
+                <h6 class="accordion-heading">
+                  <a href="#filter" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="filter">
+                    Buscar producto
+                    <span class="accordion-indicator"></span>
+                  </a>
+
+
+                </h6>
+              </div>
+              <div class="collapse show" id="filter" aria-labelledby="filter-panel">
+                <div class="cs-widget pl-1  pb-4 mt-n3">
+                  <div class="input-group-overlay  d-lg-block d-none order-lg-3 mt-3">
+        <input
+          class="form-control appended-form-control"
+          type="text"
+          placeholder="Search for products..."
+          name="filterproducto"
+        />
+        <div class="input-group-append-overlay">
+          <span class="input-group-text"
+            ><i class="cxi-search lead align-middle" style="cursor:pointer"></i
+          ></span>
+        </div>
+      </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div class="card border-bottom">
+              <div class="card-header pt-0 pb-3" id="category-panel">
+                <h6 class="accordion-heading">
+                  <a href="#category" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="category">
+                    Categorias
+                    <span class="accordion-indicator"></span>
+                  </a>
+                </h6>
+              </div>
+              <div class="collapse show" id="category" aria-labelledby="category-panel">
+                <div class="cs-widget-data-list cs-filter">
+                  <div class="input-group-overlay mb-3">
+                    <input type="text" class="cs-filter-search form-control form-control-sm appended-form-control" placeholder="Search the clothes" name="filtercategoria"  >
+                    <div class="input-group-append-overlay">
+                      <span class="input-group-text">
+                        <i class="cxi-search font-size-sm"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <ul class="cs-filter-list list-unstyled pr-3" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
+                    <li class="cs-filter-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="radio" name="group1" class="custom-control-input"  id="blazers-todos" value="todos">
+                        <label for="blazers-todo" class="custom-control-label">
+                          <span class="cs-filter-item-text">todos </span>
+                          <span class="pl-1 text-muted">(235)</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="cs-filter-item" >
+                      <div class="custom-control custom-checkbox">
+                        <input type="radio" name="group1" class="custom-control-input">
+                        <label class="custom-control-label">
+                          <span class="cs-filter-item-text"> </span>
+                          <span class="pl-1 text-muted">(235)</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price -->
+            <div class="card border-bottom">
+              <div class="card-header py-3" id="price-panel">
+                <h6 class="accordion-heading">
+                  <a href="#price" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="price">
+                    Price
+                    <span class="accordion-indicator"></span>
+                  </a>
+                </h6>
+              </div>
+              <div class="collapse show" id="price" aria-labelledby="price-panel">
+                <div class="cs-widget pl-1 pr-3 pb-4 mt-n3">
+                  <div class="cs-range-slider" data-start-min="250" data-start-max="680" data-min="0" data-max="1000" data-step="1">
+                    <div class="cs-range-slider-ui"></div>
+                    <div class="d-flex align-items-center mt-3">
+                      <div class="w-50">
+                        <div class="form-group position-relative mb-0">
+                          <input type="number" class="form-control form-control-sm cs-range-slider-value-min">
+                        </div>
+                      </div>
+                      <div class="mx-1 px-2 font-size-xs">—</div>
+                      <div class="w-50">
+                        <div class="form-group position-relative mb-0">
+                          <input type="number" class="form-control form-control-sm cs-range-slider-value-max">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product grid -->
+      <div class="col">
+        <div class="row" >
+            <div class="col-12 text-center">
+              <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+
+              </div>
+            </div>
+        </div>
+        <div  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3" data-filters-columns>
+
+          <!-- Item -->
+          <div class="container mt-5 mb-4">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-15" >
+                    <div class="row p-2 bg-white border rounded">
+                        <div class="col-md-3 mt-1">
+                          <a  class="card-img-top">
+                            <img class="d-block mb-5 font-size-sm text-muted img-fluid img-responsive rounded product-image"  alt="Product image">
+                          </a>
+                          <div class="card-product-widgets-top">
+                            <span class="badge product-badge badge-danger"></span>
+                            <div class="star-rating ml-auto">
+                              <i class="sr-star cxi-star-filled active"></i>
+                              <i class="sr-star cxi-star-filled active"></i>
+                              <i class="sr-star cxi-star-filled active"></i>
+                              <i class="sr-star cxi-star-filled active"></i>
+                              <i class="sr-star cxi-star-filled active"></i>
+
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mt-1">
+                            <h5></h5>
+                            <div class="d-flex flex-row">
+                                <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                            </div>
+                            <div class="mt-1 mb-1 spec-1"><span></span></div>
+                            <p class="text-justify text-truncate para mb-0">jasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd<br><br></p>
+                        </div>
+                        <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                            <div class="d-flex flex-row align-items-center" >
+                                <h4 class="mr-1"></h4><span class="strike-text"></span>
+                            </div>
+                            <div class="d-flex align-items-center" >
+                              <span class="h5 d-inline-block mb-0"></span>
+                              <span class="d-inline-block ml-2 pl-1 text-muted"></span>
+                            </div>
+                            <h6 class="text-success">Free shipping</h6>
+                            <div class="d-flex flex-column mt-4">
+                              <button  type="button" class="btn btn-primary btn-block" >
+                                <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                                Add to cart
+                              </button>
+                              <button  type="button" class="btn btn-primary" disabled>
+                                <span class="spinner-grow spinner-grow-sm mr-2" role="status" ariaa-hidden="true">
+                                  Loading...
+                                </span>
+                              </button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+

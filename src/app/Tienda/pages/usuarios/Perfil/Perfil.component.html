@@ -1,0 +1,83 @@
+<main  class="cs-page-wrapper">
+  <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb-alt mb-0">
+        <li class="breadcrumb-item">
+          <a routerLink="['/']"><i class="cxi-home"></i></a>
+        </li>
+        <li class="breadcrumb-item">
+          <a routerLink="[/cuenta/perfil]">porfile</a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+    <section class="container pt-3 pt-lg-4 pb-5 pb-lg-6">
+      <div class="row pb-2 pb-lg-0">
+
+        <!-- Account menu (sticky sidebar) -->
+        <aside class="col-xl-3 col-lg-4 pb-3 mb-4 mb-lg-0">
+         <app-Sidevar></app-Sidevar>
+        </aside>
+
+
+
+        <!-- Content -->
+        <div class="col-lg-8 ml-auto">
+          <form>
+            <div class="row pb-3">
+              <div class="col-sm-6 form-group">
+                <label for="ac-fn">Nombres</label>
+                <input type="text" class="form-control form-control-lg" name="nombre"  placeholder="Nombre completo">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-ln">Apellidos</label>
+                <input type="text"  class="form-control form-control-lg"  name="apellido"  placeholder="apellido completo">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-email">Email</label>
+                <input type="email"  class="form-control form-control-lg"  readonly placeholder="email">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-phone">Contraseña</label>
+                <input type="password" autocomplete="new-password"  class="form-control form-control-lg" id="input_password"  placeholder="Nueva contraseña">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-phone">Telefono</label>
+                <input type="number"  class="form-control form-control-lg"  name="telefono"  placeholder="102222222">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-phone">Fecha de Nacimiento</label>
+                <input type="date"  class="form-control form-control-lg"  name="f_nacimiento"  >
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-phone">DNI</label>
+                <input type="number"  class="form-control form-control-lg"  name="DNI" placeholder="1020796548">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-country">Genero</label>
+                <select id="ac-country" class="custom-select custom-select-lg" name="genero" >
+                  <option value="" disabled selected>Choose </option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select>
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ac-city">Pais</label>
+                <select id="ac-city"  class="custom-select custom-select-lg" name="pais">
+                  <option value="" disabled>Choose Pais</option>
+                  <option value="argentina">Argentina</option>
+                  <option value="Bolivia">Bolivia</option>
+                  <option value="chile">Chile</option>
+                  <option value="colombia">Colombia</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">&nbsp;Actualizar perfil&nbsp;</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+
+</main>
